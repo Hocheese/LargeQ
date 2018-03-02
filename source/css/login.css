@@ -1,0 +1,33 @@
+@charset "utf-8";
+body,html,#login_main{
+    height: 100%;
+}
+button{
+    width: 380px;
+    padding: 10px;
+    border: none;
+    background-color:  #9e100d;
+    color: #FFF;
+    font-family: "姚体";
+}
+input{
+    width: 360px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+}
+#login_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login_box{
+    /*height: 320px;*/
+    text-align: center;
+}
+#login_box>div{
+    width: 100%;
+}
+#logo_circle_128{
+    margin: auto;
+}

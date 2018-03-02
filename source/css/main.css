@@ -1,0 +1,95 @@
+@charset "utf-8";
+@font-face{
+    font-family: "姚体";
+    src: url("/source/fonts/yao2.ttf")format('truetype');
+}
+
+/*通用*/
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html,body{
+    margin: 0;
+    background-color: rgb(255, 150, 112);
+}
+h1,h2,h3,h4,h5,h6{
+    color: #9e100d;
+    font-family: "姚体";
+    font-weight: bolder;
+    font-style: oblique;
+    letter-spacing: -3px;
+}
+.main{
+    width: 1200px;
+    margin: auto;
+}
+#logo_circle_128{
+    overflow: hidden;
+    height: 128px;
+    width: 128px;
+    border-radius: 64px;
+}
+/*页头*/
+nav{
+    width: 100%;
+    height: 70px;
+    font-family: "黑体";
+    position: fixed;
+    top: 0;
+}
+nav{
+    background-color: #9e100d;
+}
+nav a{
+    font-size: 22px;
+    padding: 24px;
+    float: left;
+    color: #FFF;
+}
+#nav_logo a{
+    padding: 0;
+}
+#nav_logo{
+    width: 70px;
+    float: left;   
+}
+/*#nav_title{
+}
+/*页体*/
+.lf_atc{
+    background-color: #f5f79c;
+    padding: 2%;
+    width: 96%;
+    border-radius: 10px;
+}
+.act_ab{
+    font-family: "宋体";
+    font-weight: bold;
+}
+.act_if{
+    font-family: "楷体";
+    color: chocolate;
+}
+.atc_tg>span{
+    color: rgb(255, 230, 0);
+    background-color: #9e100d;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+#main{
+    display: flex;
+    clear: left;
+    margin-top: 100px;
+}
+#m_lf{
+    width: 60%;
+}
+#m_rt{
+    width: 40%;
+}
+/*页脚*/
+footer{
+    text-align: center;
+}

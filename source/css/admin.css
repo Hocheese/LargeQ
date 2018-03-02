@@ -1,0 +1,32 @@
+html,body{
+    margin: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+nav{
+    width: 30%;
+    background-color: blueviolet;
+}
+nav>div{
+    border-bottom: 1px #FFF solid;
+}
+nav>div>a{
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px;
+}
+#items{
+    width: 70%;
+    padding: 2%;
+    background-color: chocolate;
+}
+#items>div{
+    margin: 20px 0;
+    padding: 10px 0;
+}
+h2{
+    width: 100%;
+    border-bottom: saddlebrown 1px solid;
+}

@@ -1,0 +1,62 @@
+<?php
+class Admin extends Controller{
+    private $log="";
+    function __construct(){
+        $this->log=new Log();
+        /*if(!isset($_SESSION["admin"])||$_SESSION["admin"]!=1){
+            $this->log->output(Log::$warn_hack,"非法进入管理模块。\r\n\t\tURL:".$_SERVER['REQUEST_URI'].
+            "\r\n\t\tIP:".$_SERVER["REMOTE_ADDR"].
+            "\r\n\t\tUSER_AGENT:".$_SERVER['HTTP_USER_AGENT']);
+            $this->fuck();
+            exit;
+        }*/
+    }
+    
+    function clear(String $type){
+        switch($type){
+            case "cache":
+                header("Content-type:application/json");
+                global $config;
+                $cache=$config["path"]["cache"];
+                $filelist=null;
+				try{
+                    $filelist=scandir($cache);
+                    $file;
+					foreach($filelist as $key =>$value){
+						$file[$key]["path"]="cache/".$value;
+						if(is_file("cache/".$value)){
+							$rel=false;
+							try{
+								$rel=unlink("cache/".$value);
+							}catch(Exception $e){
+                                $this->log->output(Log::$err_adm,"文件删除失败：".$e->getMessage());
+							}
+							$file[$key]["rel"]=$rel?"成功":"失败";
+							
+						}else{
+							$file[$key]["rel"]="忽略";
+						}
+                    }
+                    echo json_encode($file);
+				}catch(Exception $e){
+					exit($error="读取文件列表失败。".$e->getMessage()) ;
+				}
+                break;
+            default:
+        }
+    }
+
+    function user(String $opt){
+        switch($opt){
+            case "display":
+                $tpl=new Tpl("admin/user");
+                $tpl->display();
+                break;
+            case "add":
+                include("function/user.php");
+                $r=add($_POST);
+                echo $r;
+        }
+    }
+}
+?>
