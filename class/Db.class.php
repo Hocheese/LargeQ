@@ -50,7 +50,7 @@ class Db{
             $fileds=$f;
         }
         $sql="SELECT ".$fileds." FROM `$table` ";
-        if(!empty($cond) && is_array()){
+        if(!empty($cond)){
             if(is_array($cond)){
                 $c="";
                 foreach($cond as $key=>$value){
@@ -58,7 +58,7 @@ class Db{
                 }
                 $cond=$c;
             }
-            $sql.=$cond;
+            $sql.=(" WHERE ".$cond);
             
         }
         return $sql;

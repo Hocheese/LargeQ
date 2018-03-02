@@ -3,13 +3,18 @@ class Admin extends Controller{
     private $log="";
     function __construct(){
         $this->log=new Log();
-        /*if(!isset($_SESSION["admin"])||$_SESSION["admin"]!=1){
+        if(!isset($_SESSION["userinfo"]["admin"])||$_SESSION["userinfo"]["admin"]<1){
+            $snData="";
+            foreach($_SESSION as $k=>$v){
+                $snData.=($k.":".$v."\r\n");
+            }
             $this->log->output(Log::$warn_hack,"非法进入管理模块。\r\n\t\tURL:".$_SERVER['REQUEST_URI'].
             "\r\n\t\tIP:".$_SERVER["REMOTE_ADDR"].
-            "\r\n\t\tUSER_AGENT:".$_SERVER['HTTP_USER_AGENT']);
+            "\r\n\t\tUSER_AGENT:".$_SERVER['HTTP_USER_AGENT'].
+            "\r\n\t\tSESSION:".$snData);
             $this->fuck();
             exit;
-        }*/
+        }
     }
     
     function clear(String $type){

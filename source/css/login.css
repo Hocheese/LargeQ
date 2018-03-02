@@ -31,3 +31,40 @@ input{
 #logo_circle_128{
     margin: auto;
 }
+
+.input_err{
+    animation-name: form_err;
+    animation-direction: 3s;
+    -webkit-animation-duration:3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count:infinite;
+    animation-play-state: running;
+
+    border: 2px #FCC solid;
+        padding: 8px;
+        background-color: #FFF;
+}
+.input_success{
+    animation-name: form_success;
+    animation-direction: 9s;
+    -webkit-animation-duration:9s;
+    animation-timing-function: ease-out;
+    animation-iteration-count:1;
+    animation-play-state: running;
+
+    border: 2px #9F9 solid;
+        padding: 8px;
+        background-color: #FFF;
+}
+.input_warm{
+    animation-name: form_warm;
+    animation-direction: 5s;
+    -webkit-animation-duration:5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count:2;
+    animation-play-state: running;
+
+    border: 2px #FF9 solid;
+        padding: 8px;
+        background-color: #FFF;
+}

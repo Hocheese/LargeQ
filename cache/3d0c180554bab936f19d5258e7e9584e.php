@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>小青青的秘密基地</title>
     <link href="/Style/main" type="text/css" rel="stylesheet">
+    <script src="/Js/main"></script>
 </head>
 
 <body>

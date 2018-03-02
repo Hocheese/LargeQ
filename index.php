@@ -20,4 +20,5 @@ $ctrlfc=$vp->ctrl;
 //echo $ctrlfc."<fuck>";
 $ctrl->$ctrlfc();
 //echo "微秒：".microtime()."微秒true：".microtime(true)." 秒：".time();
+//echo true;
 ?>

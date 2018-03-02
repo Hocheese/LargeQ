@@ -1,0 +1,60 @@
+[21:55:25][sql信息]执行语句：INSERT INTO `user`( `username` , `password` , `admin` , `timeline` )VALUES( 'IVEN' , '$2y$10$jXbImI.EjsjfikVZ5u29guJuq3zD3AXMw4aIYJQE3B.7lmlM/5Bsa' , '2' , '1519998925' )  访问路径：/Admin/user/add
+[23:24:06][sql信息]执行语句：SELECT * FROM `user`   访问路径：/User/login/data
+[23:26:07][sql信息]执行语句：SELECT * FROM `user`   访问路径：/User/login/data
+[23:27:29][sql信息]执行语句：SELECT * FROM `user`  `username`='111'  访问路径：/User/login/data
+[23:27:29][sql错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='111'' at line 1  访问路径：/User/login/data
+[23:28:21][sql信息]执行语句：SELECT * FROM `user`  `username`='x222'  访问路径：/User/login/data
+[23:28:21][sql错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='x222'' at line 1  访问路径：/User/login/data
+[23:29:05][sql信息]执行语句：SELECT * FROM `user`  `username`='x222'  访问路径：/User/login/data
+[23:29:05][sql错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='x222'' at line 1  访问路径：/User/login/data
+[23:29:43][sql信息]执行语句：SELECT * FROM `user`  `username`='x222'  访问路径：/User/login/data
+[23:29:43][sql错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='x222'' at line 1  访问路径：/User/login/data
+[23:29:55][sql信息]执行语句：SELECT * FROM `user`  `username`='IVEN'  访问路径：/User/login/data
+[23:29:55][sql错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='IVEN'' at line 1  访问路径：/User/login/data
+[23:32:56][sql信息]执行语句：SELECT * FROM `user`  WHERE  `username`='IVEN'  访问路径：/User/login/data
+[23:34:02][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36  访问路径：/Admin/user/display
+[23:34:05][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36  访问路径：/Admin/user/display
+[23:34:06][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36  访问路径：/Admin/user/display
+[23:34:06][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36  访问路径：/Admin/user/display
+[23:34:06][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36  访问路径：/Admin/user/display
+[23:34:06][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36  访问路径：/Admin/user/display
+[23:34:52][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36  访问路径：/Admin/user/display
+[23:39:42][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36  访问路径：/Admin/user/display
+[23:40:45][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+		SESSION:userinfo:Array
+  访问路径：/Admin/user/display
+[23:43:15][安全警告]非法进入管理模块。
+		URL:/Admin/user/display
+		IP:127.0.0.1
+		USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0
+		SESSION:  访问路径：/Admin/user/display
+[23:44:05][sql信息]执行语句：SELECT * FROM `user`  WHERE  `username`='11'  访问路径：/User/login/data
+[23:45:26][sql信息]执行语句：SELECT * FROM `user`  WHERE  `username`='112556458865544'  访问路径：/User/login/data
+[23:49:46][sql信息]执行语句：SELECT * FROM `user`  WHERE  `username`='22'  访问路径：/User/login/data

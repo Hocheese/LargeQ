@@ -14,7 +14,7 @@ function login(String $username="",String $password=""){
     if(!$rel){
         return false;
     }
-    if(password_verify(md5(md5($passowrd).$rel[0]["timeline"]),$rel[0]["password"])){
+    if(password_verify(md5(md5($password).$rel[0]["timeline"]),$rel[0]["password"])){
         unset($rel[0]["password"]);
         $_SESSION["userinfo"]=$rel[0];
         return true;

@@ -1,4 +1,7 @@
-{tpl:system/head}
+<?php if(!defined("TOKEN")){
+	header("HTTP/1.1 403 Forbidden");
+	exit("Access Forbidden");
+} ?><?php include("cache/3d0c180554bab936f19d5258e7e9584e.php"); ?>
 <link href="/Style/login" type="text/css" rel="stylesheet">
 <link href="/Style/animation" type="text/css" rel="stylesheet">
     <div id="login_main">
@@ -49,4 +52,4 @@ un.onblur=function(){
         }
     }
 </script>
-{tpl:system/foot}
+<?php include("cache/4843dcc00afd1df33581e2df4233d045.php"); ?>

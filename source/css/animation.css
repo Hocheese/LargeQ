@@ -1,0 +1,36 @@
+@keyframes form_err{
+    from{
+        border: 2px #F00 solid;
+        padding: 8px;
+        background-color: magenta;
+    }
+    to{
+        border: 2px #FCC solid;
+        padding: 8px;
+        background-color: #FFF;
+    }
+}
+@keyframes form_success{
+    from{
+        border: 2px #0F0 solid;
+        padding: 8px;
+        background-color: lawngreen;
+    }
+    to{
+        border: 2px #9F9 solid;
+        padding: 8px;
+        background-color: #FFF;
+    }
+}
+@keyframes form_warm{
+    from{
+        border: 2px gold solid;
+        padding: 8px;
+        background-color: #FF2 ;
+    }
+    to{
+        border: 2px #FF9 solid;
+        padding: 8px;
+        background-color: #FFF;
+    }
+}

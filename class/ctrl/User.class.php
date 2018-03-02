@@ -9,7 +9,10 @@ class User extends Controller{
                 if(empty($_POST["username"])||empty($_POST["password"])){
                     echo json_decode(array("error"=>"未接收到参数"));
                 }else{
-                    echo "";
+                    include("function/user.php");
+                    
+                    $rel=login($_POST["username"],$_POST["password"]);
+                    echo $rel?1:0;
                 }
                 break;
             default:
