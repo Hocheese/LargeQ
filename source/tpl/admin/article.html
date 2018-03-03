@@ -1,0 +1,28 @@
+{tpl:admin/header}
+<div>
+    <h2>发布文章</h2>
+</div>
+<div>
+    <h2>标签列表</h2>
+    <div class="form"><input type="text" id="tag_name" placeholder="标签名"></div>
+    <div class="form"><button id="tag_add">添加标签</button></div>
+    <script>
+    var tag=queryid("tag_add");
+    tag.onclick=function(){
+        var name= queryid("tag_name");
+        if(name.value.trim()==""){
+            alert("请输入标签名");
+        }else{
+            ajax("/Admin/tag/add",{name:name},function(r){
+                if(r!=1){
+                    alert("添加失败！");
+                }
+            })
+        }
+    }
+    </script>
+</div>
+<div>
+    <h2></h2>
+</div>
+{tpl:admin/footer}

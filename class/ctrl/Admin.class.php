@@ -16,6 +16,13 @@ class Admin extends Controller{
             exit;
         }
     }
+    function article(String $opt){
+        switch($opt){
+            default:
+                $tpl=new Tpl("admin/article");
+                $tpl->display();
+        }
+    }
     
     function clear(String $type){
         switch($type){
@@ -48,6 +55,17 @@ class Admin extends Controller{
 				}
                 break;
             default:
+        }
+    }
+
+    function tag(String $opt){
+        switch($opt){
+            case "add":
+                include("function/article.php");
+                $r= tag_add($_POST["name"]);
+                echo $r;
+            default:
+                echo 0;
         }
     }
 

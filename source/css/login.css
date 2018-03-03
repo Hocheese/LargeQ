@@ -34,8 +34,8 @@ input{
 
 .input_err{
     animation-name: form_err;
-    animation-direction: 3s;
-    -webkit-animation-duration:3s;
+    animation-direction: 2s;
+    -webkit-animation-duration:2s;
     animation-timing-function: ease-out;
     animation-iteration-count:infinite;
     animation-play-state: running;

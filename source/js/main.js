@@ -23,12 +23,12 @@ function ajax(){
         if(xhr.readyState==4){
             if(xhr.status==200){
                 if(fx==null){
-                    return xhr.responseText;
+                    xhr.onreadystatechange = xhr.responseText;
                 }else{
                     fx(xhr.responseText);
                 }
             }else{
-                throw "网络错误";
+                throw "网络错误:"+xhr.status;
             }
         }
     }

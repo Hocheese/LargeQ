@@ -1,0 +1,4 @@
+[12:50:23][sql信息]执行语句：SELECT * FROM `user`  WHERE  `username`='IVEN0'  访问路径：/User/login/data
+[12:50:23][sql信息]执行语句：SELECT * FROM `user`  WHERE  `username`='IVEN0'  访问路径：/User/login/data
+[12:50:23][sql信息]执行语句：SELECT * FROM `user`  WHERE  `username`='IVEN0'  访问路径：/User/login/data
+[14:11:56][sql信息]执行语句：SELECT * FROM `user`  WHERE  `username`='000'  访问路径：/User/login/data
