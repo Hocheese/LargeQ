@@ -1,0 +1,117 @@
+[14:09:35][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 111  访问路径：/Article/111
+[14:09:46][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 111  访问路径：/Article/111
+[14:11:51][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 0  访问路径：/Article
+[14:11:52][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 0  访问路径：/Article
+[14:11:53][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 0  访问路径：/Article
+[14:11:53][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 0  访问路径：/Article
+[14:11:53][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 0  访问路径：/Article
+[14:11:53][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 0  访问路径：/Article
+[14:11:54][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 0  访问路径：/Article
+[14:11:56][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 0  访问路径：/Article
+[14:11:56][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 111  访问路径：/Article/111
+[14:11:57][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 111  访问路径：/Article/111
+[14:12:00][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 1  访问路径：/Article/1
+[14:12:07][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2
+[14:12:14][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:12:42][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:12:45][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:12:47][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:12:48][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2
+[14:12:51][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:25:09][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:25:09][模板错误]err1:不存在的模板：info  访问路径：/Article/3
+[14:25:10][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:25:10][模板错误]err1:不存在的模板：info  访问路径：/Article/3
+[14:25:40][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:25:52][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:26:43][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:27:34][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:27:42][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2
+[14:27:46][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 1  访问路径：/Article/1
+[14:27:48][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:28:13][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2
+[14:28:18][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:28:50][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2
+[14:28:54][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:29:11][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2
+[14:29:14][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:29:21][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:29:23][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:33:56][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:33:59][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:08][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:30][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:31][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:31][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:32][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:32][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:32][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:33][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:34][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:34][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:35][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:36][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:37][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:37][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:38][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:39][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:39][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:39][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:40][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:41][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:42][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:43][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:44][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:45][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:46][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:46][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:47][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:48][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:49][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:50][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:51][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:52][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:52][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:53][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:36:54][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:38:23][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:39:11][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[14:39:15][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[14:41:59][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 4  访问路径：/Article/4
+[15:02:32][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[15:05:52][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[15:32:05][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:19:16][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:19:17][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:19:37][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:20:24][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:20:49][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:21:10][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:21:29][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:21:51][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:21:54][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:22:08][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:22:12][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:23:11][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:23:41][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:23:42][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:23:46][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:24:00][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:24:22][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:24:26][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:24:47][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:25:45][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:25:54][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:28:45][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:29:57][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:29:59][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2
+[16:30:02][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:30:04][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[16:30:06][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:30:07][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2
+[16:30:09][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:30:11][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[16:30:12][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:30:33][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 3  访问路径：/Article/3
+[16:31:08][sql信息]执行语句：SELECT * FROM `article_info`   访问路径：/Article/list
+[16:31:10][sql信息]执行语句：SELECT * FROM `article_info`  WHERE  `id`= 2  访问路径：/Article/2

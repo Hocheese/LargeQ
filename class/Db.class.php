@@ -22,7 +22,6 @@ class Db{
         $this->log=new Log();
     }
 
-    
     function query(String $sql){
         if($this->debug){
             $this->log->output(Log::$info_sql,"执行语句：".$sql);

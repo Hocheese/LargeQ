@@ -4,9 +4,51 @@
 } ?><?php include("cache/3b2acd296a0ac18b604bdc12079d9456.php"); ?>
 <div>
     <h2>发布文章</h2>
+    <div class="form"><input type="text" id="article_title" placeholder="标题"></div>
+    <div class="form"><div id="article_text" contenteditable="true">内容</div></div>
+    <div class="form"><input type="text" id="password" placeholder="访问密码"></div>
+    <div class="form"><button id="article_add">发布</button></div>
+    <script>
+    var article_add=queryid("article_add");
+    article_add.onclick=function(){
+        var title=queryid("article_title").value;
+        var text=queryid("article_text").innerHTML;
+        var password=queryid("password").value;
+        if(title.trim()==""||text.trim()==""){
+            alert("标题和内容是必填项！");
+        }else{
+            ajax("/Admin/article/add",{title:title,text:text,password:password},function(r){
+                if(r!=1){
+                    alert("发布失败！");
+                }else{
+                    alert("发布成功！");
+                }
+            })
+        }
+    }
+    </script>
 </div>
 <div>
     <h2>标签列表</h2>
+    <div class="form"><input type="text" id="tag_name" placeholder="标签名"></div>
+    <div class="form"><button id="tag_add">添加标签</button></div>
+    <script>
+    var tag=queryid("tag_add");
+    tag.onclick=function(){
+        var name= queryid("tag_name");
+        if(name.value.trim()==""){
+            alert("请输入标签名");
+        }else{
+            ajax("/Admin/tag/add",{name:name.value},function(r){
+                if(r!=1){
+                    alert("添加失败！");
+                }else{
+                    alert("添加成功！");
+                }
+            });
+        }
+    }
+    </script>
 </div>
 <div>
     <h2></h2>

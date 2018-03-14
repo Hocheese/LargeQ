@@ -18,6 +18,10 @@ class Admin extends Controller{
     }
     function article(String $opt){
         switch($opt){
+            case "add":
+                include("function/article.php");
+                echo article_add($_POST["title"],$_POST["text"],$_POST["password"]);
+                break;
             default:
                 $tpl=new Tpl("admin/article");
                 $tpl->display();
@@ -64,6 +68,7 @@ class Admin extends Controller{
                 include("function/article.php");
                 $r= tag_add($_POST["name"]);
                 echo $r;
+                break;
             default:
                 echo 0;
         }

@@ -61,6 +61,7 @@ nav a{
     padding: 2%;
     width: 96%;
     border-radius: 10px;
+    margin: 5px 0; 
 }
 .act_ab{
     font-family: "宋体";
