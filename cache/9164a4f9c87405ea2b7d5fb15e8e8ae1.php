@@ -22,7 +22,7 @@
                     <div class="atc_tt" > <h2><a href="/Article/'+ r[i].id +'">'+r[i].title+'</a></h2></div >\
                         <div class="atc_tg"><span><a href="#">标签</a></span></div>\
                         <div class="act_ab"><p>'+ r[i].text +'</p></div>\
-                        <div class="act_if">'+ r[i].uid +' 发表于 ' + r[i].timeline +'</div>\
+                        <div class="act_if">'+ r[i].username +' 发表于 ' + r[i].timeline +'</div>\
             </div>'
                 }
                 

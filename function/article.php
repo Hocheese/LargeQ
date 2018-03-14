@@ -11,7 +11,8 @@ function article_info(int $id){
 
 function article_list(int $start=0,int $count=10){
     $database=new Db("article_info");
-    return $database->query($database->select());
+    return $database->query($database->select(" `article_info`.*,`user`.`username` ").
+    "LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT $start,$count ");
 }
 
 function tag_add(String $name){

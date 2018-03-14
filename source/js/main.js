@@ -21,15 +21,16 @@ function ajax(){
     xhr.open(method,url,true);
     xhr.onreadystatechange=function(){
         if(xhr.readyState==4){
-            if(xhr.status==200){
+            if (xhr.status!=200){
+                console.warn("服务器代码：" + xhr.status+" 。代码还将继续工作，但有可能会发生错误。 ");
+            }
+            
                 if(fx==null){
                     xhr.onreadystatechange = xhr.responseText;
                 }else{
                     fx(xhr.responseText);
                 }
-            }else{
-                throw "网络错误:"+xhr.status;
-            }
+            
         }
     }
     if(method=="GET"){
