@@ -1,3 +1,8 @@
+ErrorDocument 400 /err.html
+ErrorDocument 401 /err.html
+ErrorDocument 403 /err.html
+ErrorDocument 404 /err.html
+
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f

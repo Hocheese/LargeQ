@@ -1,0 +1,21 @@
+{tpl:admin/header}
+<div>
+    <h2>友情链接</h2>
+    <div class="form"><input type="text" id="name" placeholder="标题"></div>
+    <div class="form"><input type="text" id="url" placeholder="URL"></div>
+    <div class="form">
+        <button id="submit">添加</button>
+    </div>
+    <script>
+        document.getElementById("submit").onclick=function(){
+            var name=document.getElementById("name").value;
+            var url=document.getElementById("url").value;
+            ajax("/Admin/base/adf",{name:name,url:url},function(data){
+                if(data!=false){
+                    alert("提交成功！");
+                }
+            })
+        }
+    </script>
+</div>
+{tpl:admin/footer}

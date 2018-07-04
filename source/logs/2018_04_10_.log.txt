@@ -1,0 +1,38 @@
+[11:46:44][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=9  访问路径：/Article/9
+[11:46:45][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[16:07:10][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 0,10   访问路径：/Article/list/0
+[16:07:10][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[17:44:12][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=9  访问路径：/Article/9
+[17:44:12][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[17:44:54][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=9  访问路径：/Article/9
+[17:44:54][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[17:46:07][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=9  访问路径：/Article/9
+[17:46:07][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:10:50][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 0,10   访问路径：/Article/list/0
+[21:10:50][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:10:52][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=9  访问路径：/Article/9
+[21:10:52][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:14:08][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 0,10   访问路径：/Article/list/0
+[21:14:08][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:14:11][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 10,10   访问路径：/Article/list/10
+[21:14:13][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 20,10   访问路径：/Article/list/20
+[21:14:16][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 0,10   访问路径：/Article/list/0
+[21:14:16][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:14:20][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 10,10   访问路径：/Article/list/10
+[21:14:21][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 20,10   访问路径：/Article/list/20
+[21:14:38][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=12  访问路径：/Article/12
+[21:14:38][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:14:40][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 0,10   访问路径：/Article/list/0
+[21:14:40][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:14:41][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=11  访问路径：/Article/11
+[21:14:41][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:14:43][sql信息]执行语句：SELECT  `article_info`.*,`user`.`username`  FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` ORDER BY `id` DESC LIMIT 0,10   访问路径：/Article/list/0
+[21:14:43][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:14:47][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=12  访问路径：/Article/12
+[21:14:47][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[21:15:50][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=12  访问路径：/Article/12
+[21:15:50][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[23:08:50][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=12  访问路径：/Article/12
+[23:08:51][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends
+[23:08:53][sql信息]执行语句：SELECT `article_info`.*,`user`.`username` FROM `article_info` LEFT JOIN `user` ON `user`.`id`=`article_info`.`uid` WHERE `article_info`.`id`=9  访问路径：/Article/9
+[23:08:54][sql信息]执行语句：SELECT * FROM `friends`   访问路径：/Article/friends

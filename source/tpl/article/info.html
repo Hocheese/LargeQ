@@ -1,14 +1,91 @@
 {tpl:system/head_tag}
 <!--页头页体分界线-->
-
+<link href="/Style/login" type="text/css" rel="stylesheet">
+<link href="/Style/animation" type="text/css" rel="stylesheet">
 <div id="m_lf">
     <div class="lf_atc">
         <div class="atc_tt"><h2><a href="#">{$info.title}</a></h2></div>
         <div class="atc_tg"><span><a href="#">标签</a></span></div>
         <div class="act_ab"><p>{$info.text}</p></div>
-        <div class="act_if">{$info.uid} 发表于 {$info.timeline}</div>
+        <div class="act_if">{$info.username} 发表于 {$info.timeline}</div>
     </div>
-    <script></script>
+    <div class="lf_atc" id="cmt_fm">
+        <div class="atc_tt"><h2><a href="#">评论区</a></h2></div>
+        <div class="act_ab"><p>因工作需要，本基地需要登记您的邮箱、IP地址和来源。您的这三个信息只有本基地工作人员可见。</p></div>
+        <div class="act_ab">
+            <div><input type="text" id="nickname" name="nickname" placeholder="昵称"></div>
+            <div><input type="email" id="email" name="email" placeholder="邮箱"></div>
+            <div style="display:flex;"><input type="text" id="vcode" name="vcode" placeholder="为了防范敌人使用自动化武器对我方偷袭，请输入验证码。"><img style="padding:10px;" id="vc_img" src="/Image/verCode" title="点击更换验证码" alt="验证码"></div>
+            <div><textarea rows="5" id="text" placeholder="留言"></textarea></div>
+            <div>
+                <select id="selectFrom"> 
+                    <option value="">你和王贺青的关系是：请选择</option>
+                    <option value="同学">你和王贺青的关系是：现在或曾经的同学、校友</option>
+                    <option value="知乎">你和王贺青的关系是：知乎网友</option>
+                    <!--option value="贴吧（区域类）">你和王贺青的关系是：贴吧网友-区域类（商会校、上电职院、月浦）</option-->
+                    <option value="贴吧（情感类）">你和王贺青的关系是：贴吧网友-情感类（恶魔终点、第四爱）</option>
+                    <option value="贴吧（社会、时政）">你和王贺青的关系是：贴吧网友（社会类、时政类）</option>
+                    
+                    <option value="贴吧（其它类）">你和王贺青的关系是：贴吧网友-其它类</option>
+                    <option value="0">你和王贺青的关系是：其它（请在下方表单中写出）</option>
+                </select>
+            </div>
+            <div><input id="from" type="text" id="from" name="from" placeholder="来源，优先使用上方列表(最多15个字符)" readonly></div>
+            <div><button id="submit">点此提交您的留言。我们将在审核完成后公布它。</button></div>
+        </div>
+        
+    </div>
+    <script>
+    document.getElementById("selectFrom").addEventListener("change",function(e){
+        console.log(this);
+        console.log(e.target);
+        document.getElementById("from").value=this.value;
+        if(this.value=="0"){
+            document.getElementById("from").value="";
+            document.getElementById("from").readOnly=false;
+        }
+        else{
+            document.getElementById("from").readOnly = true;
+        }
+    })
+    document.getElementById("submit").addEventListener("click",function(e){
+        var nickname = document.getElementById("nickname");
+        var email = document.getElementById("email");
+        var vc = document.getElementById("vcode");
+        var text = document.getElementById("text");
+        var from = document.getElementById("from");
+        var ok=true;
+        ok=ok&&checkFormOut(nickname,6000);
+        ok = ok &&checkFormOut(email, 6000);
+        ok = ok &&checkFormOut(vc, 6000);
+        ok = ok &&checkFormOut(text, 6000);
+        ok = ok &&checkFormOut(from, 6000);
+        var vcode=document.getElementById("vcode").value;
+        ajax("/Image/verCodeCheck/"+ vcode,
+            function(rel){
+                if(rel.trim()=="true"){
+                    ajax("/Comment/add/{$info.id}" ,
+                        {
+                            nickname: nickname.value,
+                            email: email.value,
+                            text: text.value,
+                            from: from.value
+                        }, function (rel) {
+                            if (rel == "true") {
+                                //Comment
+                            }
+
+                        });
+                }else{
+                    document.getElementById("vcode").classList="";
+                    document.getElementById("vcode").classList.add("input_err");
+                }
+            });
+    })
+    document.getElementById("vc_img").addEventListener("click",function(e){
+        document.getElementById("vc_img").src="/Image/verCode?seed="+Math.random();
+    })
+    </script>
 </div>
 
 {tpl:system/foot_right}

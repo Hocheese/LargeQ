@@ -40,13 +40,39 @@ function ajax(){
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         var dataStr="";
         for(a in data){
-            dataStr+=(a+"="+data[a]+"&");
+            var dataFileter = data[a];
+            if (typeof dataFileter=="string"){
+                dataFileter = dataFileter.replace(/\&/g, "\\u0026");
+                dataFileter = dataFileter.replace(/\=/g, "\\u003d");
+            }
+            
+            dataStr += (a + "=" + dataFileter+"&");
         }
         xhr.send(dataStr);
     }
     if (typeof xhr.onreadystatechange=="string"){
         return xhr.responseText;
     }
+}
+function checkform(form,length){
+    var txt=form.value;
+    if(txt.trim()==""){
+        return false;
+    }
+    if(txt.length>length){
+        return false;
+    }
+    return true;
+}
+function checkFormOut(form,length){
+    var rel=checkform(form,length);
+    form.attributes.class="";
+    if(rel){
+        form.classList.add("input_success");
+    }else{
+        form.classList.add("input_err");
+    }
+    return rel;
 }
 //id选择器
 function queryid(selector){

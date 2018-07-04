@@ -13,20 +13,48 @@
                 你你你不发不发工资工资 你还我还我血汗钱 还我血汗钱！</p></div>
                 <div class="act_if">admin 发表于 1970年1月1日 08:00</div>
             </div-->
+            <button id="load"><h4>正在加载...</h4></button>
             <script>
-            ajax("/Article/list",function(data){
-                r=JSON.parse(data);
-                for(i in r){
-                    console.log(r[i].title);
-                    document.getElementById("m_lf").innerHTML += '<div class="lf_atc">\
-                    <div class="atc_tt" > <h2><a href="/Article/'+ r[i].id +'">'+r[i].title+'</a></h2></div >\
-                        <div class="atc_tg"><span><a href="#">标签</a></span></div>\
-                        <div class="act_ab"><p>'+ r[i].text +'</p></div>\
-                        <div class="act_if">'+ r[i].username +' 发表于 ' + r[i].timeline +'</div>\
-            </div>'
-                }
-                
-            })
+                var nowPage=1;
+                getlist(0);
+            function getlist(page){
+                page=page*10
+                ajax("/Article/list/"+page, function (data) {
+                    r = JSON.parse(data);
+                    if(r){
+                        for (i in r) {
+                            if (r[i] != null) {
+                                var atc = document.createElement("div");
+                                atc.className = "lf_atc";
+                                atc.innerHTML = '<div class="atc_tt" > <h2><a href="/Article/' + r[i].id + '">' + r[i].title + '</a></h2></div >\
+                            <div class="atc_tg"><span><a href="#">标签</a></span></div>\
+                            <div class="act_ab"><p>'+ r[i].text + '</p></div>\
+                            <div class="act_if">'+ r[i].username + ' 发表于 ' + r[i].timeline + '</div>'
+                                document.getElementById("m_lf").insertBefore(atc, document.getElementById("load"));
+
+                                /*document.getElementById("m_lf").innerHTML += '<div class="lf_atc">\
+                                <div class="atc_tt" > <h2><a href="/Article/'+ r[i].id + '">' + r[i].title + '</a></h2></div >\
+                                <div class="atc_tg"><span><a href="#">标签</a></span></div>\
+                                <div class="act_ab"><p>'+ r[i].text + '</p></div>\
+                                <div class="act_if">'+ r[i].username + ' 发表于 ' + r[i].timeline + '</div>\
+                                </div>'*/
+                            }
+
+                        }
+                    }else{
+                        alert("我就这么多东西啦，都给你看过啦！！");
+                        document.getElementById("load").onclick=null;
+                        document.getElementById("load").innerHTML = "<h4>已无更多...</h4>";
+                    }
+                     
+                })
+                document.getElementById("load").innerHTML = "<h4>点击这里再加载10篇</h4>"; 
+            }
+            document.getElementById("load").onclick=function(){
+                document.getElementById("load").innerHTML = "<h4>正在加载...</h4>";
+                getlist(nowPage);
+                nowPage++;
+            }
             </script>
         </div>
         

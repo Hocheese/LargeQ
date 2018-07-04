@@ -40,7 +40,7 @@ class Image extends Controller{
 							 "江来报道要是出了偏差……",
 							 "水能载舟  亦可赛艇",
 							 "我与华莱士谈笑风生",
-							 "native",
+							 "无可奉告",
 							 "闷声大发财",
 							 "一切要按基本法来",
 							 "西方的哪一个国家我没去过"
@@ -50,8 +50,8 @@ class Image extends Controller{
 							 "帝国主义是纸老虎",
 							 "天若有情天亦老  人间正道是沧桑",
 							 "一切反动派都是纸老虎",
-							 "宜将剩勇追穷寇  不可沽名学霸王",
 							 "踏遍青山人未老  风景这边独好",
+							 "宜将剩勇追穷寇  不可沽名学霸王",
 							 "星星之火  可以燎原",
 							 "好好学习  天天向上"
 						);
@@ -65,7 +65,7 @@ class Image extends Controller{
 		imagedestroy($errorImage);
 	}
 	//获取图片
-	function get(){
+	function get($id=0){
 		//header("Content-type:image/png");
 		if(isset($_GET['id'])){
 			$rel=image_get((int)$_GET['id']);
@@ -75,7 +75,7 @@ class Image extends Controller{
 				imagecolorallocate($errorImage,255,255,255);
 				$color=imagecolorallocate($errorImage,rand(0,255),rand(0,255),rand(0,255));
 				$str=$rel["error"]==2?"图片不存在":"数据库出错";
-				imagefttext($errorImage,32.0,0,0,45,$color,"fonts/mzd.ttf",$str);
+				imagefttext($errorImage,32.0,0,0,45,$color,"source/fonts/mzd.ttf",$str);
 				imagepng($errorImage);
 				imagedestroy($errorImage);
 			}else{
@@ -102,7 +102,7 @@ class Image extends Controller{
 							$errorImage=imagecreate(220,60);
 							imagecolorallocate($errorImage,255,255,255);
 							$color=imagecolorallocate($errorImage,rand(0,255),rand(0,255),rand(0,255));
-							imagefttext($errorImage,32.0,0,0,45,$color,"fonts/mzd.ttf","系统出错");
+							imagefttext($errorImage,32.0,0,0,45,$color,"source/fonts/mzd.ttf","系统出错");
 							output_log("图片错误","不支持的图片类型 id:".$rel["data"]["id"]." 类型：".$rel["data"]["type"]." 路径：".$rel["data"]["src"]);
 							imagepng($errorImage);
 							imagedestroy($errorImage);
@@ -170,27 +170,50 @@ class Image extends Controller{
 				
 			}
 		}else{
-			header("Content-type:image/png");
-			//彩蛋
-			$errorInfo=array("江山如此多娇  引无数英雄竞折腰",
-							 "帝国主义是纸老虎",
-							 "天若有情天亦老  人间正道是沧桑",
-							 "一切反动派都是纸老虎",
-							 "宜将剩勇追穷寇  不可沽名学霸王",
-							 "踏遍青山人未老  风景这边独好",
-							 "星星之火  可以燎原",
-							 "好好学习  天天向上"
-							);
-			$eid=rand(0,count($errorInfo)-1);
-			$errorImage=imagecreate(680,60);
-			imagecolorallocate($errorImage,255,255,255);
-			$color=imagecolorallocate($errorImage,rand(0,255),rand(0,255),rand(0,255));
-			imagefttext($errorImage,32.0,0,(500-strlen($errorInfo[$eid])/3*32)/2,45,$color,"//fonts/mzd.ttf",$errorInfo[$eid]);
-			imagepng($errorImage);
-			imagedestroy($errorImage);
+			$this->egg();
 		}
 		
 		
+	}
+	//验证码
+	function verCode(){
+		header("Content-type:image/png");
+		ob_clean();
+		$i=0;
+		$vcode=array();
+		while($i<4)
+		{
+		
+			if(rand(1,2)%2==0){
+				if(rand(1,2)%2==0){
+					$vcode[$i]=chr(rand(65,90));
+				}else{
+					$vcode[$i]=chr(rand(97,122));
+				}
+			}else{
+				$vcode[$i]=chr(rand(48,57));
+			}
+			$i++;
+		}
+		$codeImage=imagecreate(100,40);
+		imagecolorallocate($codeImage,255,255,255);
+		$i=0;
+		while($i<4){
+			$font=rand(0,2);
+			$fontList=array("HoboStd.otf","GiddyupStd.otf","BrushScriptStd.otf");
+			$fontFamily="source/fonts/".$fontList[$font];
+			$color=imagecolorallocate($codeImage,rand(0,255),rand(0,255),rand(0,255));
+			imagefttext($codeImage,32.0,15-rand(0,30),rand(0,10)+$i*25,rand(30,40),$color,$fontFamily,$vcode[$i]);
+			$i++;
+		}
+		$_SESSION['verCode']="".$vcode[0].$vcode[1].$vcode[2].$vcode[3];
+		imagepng($codeImage);
+		imagedestroy($codeImage);
+	
+	}
+	function verCodeCheck($verCode=0){
+		header("Content-type:application/json");
+		echo $verCode==$_SESSION['verCode']?"true":"false";
 	}
 }
 ?>

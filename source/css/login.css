@@ -2,19 +2,22 @@
 body,html,#login_main{
     height: 100%;
 }
-button{
-    width: 380px;
+button,select{
+    width: 330px;
     padding: 10px;
     border: none;
     background-color:  #9e100d;
     color: #FFF;
     font-family: "姚体";
+    margin: 10px;
+    cursor: pointer;
 }
-input{
-    width: 360px;
+input,textarea{
+    width: 310px;
     padding: 10px;
     margin: 10px;
     border: none;
+    resize: none;
 }
 #login_main{
     display: flex;

@@ -27,6 +27,10 @@ h3{
     width: 1200px;
     margin: auto;
 }
+.main>div{
+    padding: 5px;
+}
+
 #logo_circle_128{
     overflow: hidden;
     height: 128px;
@@ -55,11 +59,15 @@ nav a{
 }
 #nav_logo{
     width: 70px;
-    float: left;   
+    float: left; 
+    padding: 0;  
 }
 /*#nav_title{
 }
 /*页体*/
+img{
+    cursor: pointer;
+}
 .lf_atc{
     background-color: #f5f79c;
     padding: 2%;
@@ -82,6 +90,14 @@ nav a{
     padding: 5px;
     font-size: 12px;
 }
+#load{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: #f5f79c;
+    border-radius: 10px;
+    cursor: pointer;
+}
 #main{
     display: flex;
     clear: left;
@@ -96,4 +112,22 @@ nav a{
 /*页脚*/
 footer{
     text-align: center;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1366px){
+    .main{
+        width: 98%;
+    }
+}
+@media screen and (max-width: 768px){
+    .main{
+        flex-direction: column;
+        width: 98%;
+    }
+    .main>div{
+        padding: 0;
+    }
+    #m_lf,#m_rt{
+        width: 100%;
+    }
 }

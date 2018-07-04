@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>这儿没有东西</title>
+<style>
+html{
+	background:#0DF;
+}
+h1{
+	font-family:"黑体";
+	color:#FC0;
+}
+#center {
+	text-align:center;
+	margin:auto;
+	padding:0;
+
+}
+p,h1,body {
+	
+	width:99%;
+	
+}
+@media screen and (max-device-width: 950px){
+	#center {
+		width:100%;
+	}
+}
+</style>
+</head>
+
+<body>
+<div id="center">
+   <canvas width="201" height="201"></canvas>
+   <h1>404 NO FOUND</h1>
+   <p style="display:block"><a href="/">返回首页</a></p>
+</div>
+<script>
+drawTime();
+var t=window.setInterval("drawTime();",1000);
+function drawTime(){
+var date=new Date();
+var h=(date.getHours()>12)?(date.getHours()-12):date.getHours();
+var m=date.getMinutes();
+var s=date.getSeconds();
+var draw=document.getElementsByTagName("canvas").item(0).getContext("2d");
+
+draw.clearRect(0,0,201,201);
+draw.beginPath();
+draw.moveTo(196,100);
+//先把时钟的形状画出来
+draw.lineWidth="10";
+draw.strokeStyle="#F50";
+draw.arc(100,100,95,0,2*Math.PI);
+draw.moveTo(100,100);
+draw.arc(100,100,5,0,2*Math.PI);
+//画针
+draw.moveTo(100,100);
+draw.lineTo(100 + Math.sin(360/12*h*Math.PI*2/360)*40 , 100 - Math.cos(360/12*h*Math.PI*2/360)*40)
+//console.log("x:"+(Math.sin(360/60*s*Math.PI*2/360))+" Y:"+( Math.cos(360/60*s*Math.PI*2/360))+" s:"+s+" j:"+360/60*s);
+draw.moveTo(100,100);
+draw.lineTo(100 + Math.sin(360/60*m*Math.PI*2/360)*60 , 100 - Math.cos(360/60*m*Math.PI*2/360)*60)
+draw.moveTo(100,100);
+draw.lineTo(100 + Math.sin(360/60*s*Math.PI*2/360)*80 , 100 - Math.cos(360/60*s*Math.PI*2/360)*80)
+draw.stroke();
+
+}
+</script>
+</body>
+</html>
